@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>LAB 28</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 20px;
+    }
+    input, button {
+      padding: 8px;
+      margin-right: 5px;
+    }
+    ul {
+      margin-top: 15px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Список завдань</h2>
+  <input type="text" id="taskInput" placeholder="Нове завдання">
+  <button onclick="addTask()">Додати</button>
+  <button onclick="clearTasks()">Очистити все</button>
+  <ul id="taskList"></ul>
+
+  <script src="script28.js"></script>
+</body>
+</html>
