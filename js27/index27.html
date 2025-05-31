@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>LAB 27</title>
+  <style>
+    #container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .btn {
+      width: 80px;
+      height: 30px;
+      margin: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Порівняння часу обробки подій</h2>
+  <button onclick="attachWithoutOptimization()">Без оптимізації</button>
+  <button onclick="attachWithDelegation()">Делегування</button>
+  <button onclick="attachWithDebounce()">Дебаунсінг</button>
+  <div id="container"></div>
+
+  <!-- Підключення зовнішнього скрипта -->
+  <script src="script27.js"></script>
+</body>
+</html>
