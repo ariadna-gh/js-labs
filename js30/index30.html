@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
@@ -8,9 +9,16 @@
 
   <label>Дата 1: <input type="date" id="date1"></label><br><br>
   <label>Дата 2: <input type="date" id="date2"></label><br><br>
-
   <button onclick="compareDates()">Порівняти</button>
+
   <p id="result"></p>
+
+  <hr>
+
+  <h3>Всі п'ятниці поточного місяця:</h3>
+  <button onclick="showFridays()">Показати</button>
+  <ul id="fridayList"></ul>
+
   <script src="script30.js"></script>
 </body>
 </html>

@@ -26,3 +26,32 @@ function compareDates() {
     result.textContent = "Дати однакові.";
   }
 }
+
+// 👉 НОВА ФУНКЦІЯ для виведення пʼятниць поточного місяця
+function showFridays() {
+  const today = new Date();
+  const year = today.getFullYear();
+  const month = today.getMonth(); // 0 = січень, 11 = грудень
+  const fridays = [];
+
+  for (let day = 1; day <= 31; day++) {
+    const date = new Date(year, month, day);
+    if (date.getMonth() !== month) break; // вихід, якщо вийшли за межі місяця
+    if (date.getDay() === 5) { // 5 = пʼятниця
+      fridays.push(date.toLocaleDateString());
+    }
+  }
+
+  const list = document.getElementById('fridayList');
+  list.innerHTML = ""; // очищення перед новим виводом
+
+  if (fridays.length === 0) {
+    list.innerHTML = "<li>У цьому місяці немає п'ятниць 😲</li>";
+  } else {
+    fridays.forEach(date => {
+      const li = document.createElement('li');
+      li.textContent = date;
+      list.appendChild(li);
+    });
+  }
+}
