@@ -27,7 +27,7 @@ function compareDates() {
   }
 }
 
-// 👉 НОВА ФУНКЦІЯ для виведення пʼятниць поточного місяця
+// НОВА ФУНКЦІЯ для виведення пʼятниць поточного місяця
 function showFridays() {
   const today = new Date();
   const year = today.getFullYear();
@@ -46,7 +46,7 @@ function showFridays() {
   list.innerHTML = ""; // очищення перед новим виводом
 
   if (fridays.length === 0) {
-    list.innerHTML = "<li>У цьому місяці немає п'ятниць 😲</li>";
+    list.innerHTML = "<li>У цьому місяці немає п'ятниць </li>";
   } else {
     fridays.forEach(date => {
       const li = document.createElement('li');
